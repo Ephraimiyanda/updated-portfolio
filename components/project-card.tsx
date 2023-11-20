@@ -120,8 +120,9 @@ export default function ProjectCard({
           ></Button>
         </div>
         <div className="flex gap-1 flex-wrap">
-          {stacks.map((stack: string) => (
+          {stacks.map((stack: string,index:number) => (
             <Chip
+            key={index}
               endContent={ImageComponent(stack)}
               variant="flat"
               color="secondary"

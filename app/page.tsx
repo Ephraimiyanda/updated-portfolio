@@ -504,7 +504,7 @@ export default function Home() {
             intern whre i earned a frontend developer certificate .During my
             time at Nhub i was tasked with the responsibility of bdelivering
             high-quailty,responsive web solutions by crafting visually stunning
-            and user interfaces. I also participated in pitch's, where we are
+            and user interfaces. I also participated in pitch&apos;s, where we are
             grouped into teams and asked to come up with business solutions to
             real life problems which tech could solve (mainly the software part)
             and how tech can solve them and then we collaborate as a team using
