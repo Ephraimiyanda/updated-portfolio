@@ -17,7 +17,7 @@ import nextjs from "../public/images/nextjs-fill-svgrepo-com.svg";
 import react from "../public/images/react.svg";
 import bootstrap from "../public/images/bootstrap-solid 1.svg";
 import api from "../public/images/api-app-svgrepo-com.svg";
-import nextui from "../public/images/next ui.png";
+import nextui from "../public/images/nextui.png";
 import internet from "../public/images/internet-svgrepo-com.svg";
 import tailwind from "../public/images/tailwind-css-logo-5AD4175897-seeklogo.com.png"
 interface ProjectCardProps {

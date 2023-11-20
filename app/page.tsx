@@ -461,7 +461,7 @@ export default function Home() {
                   <MyImage
                     width={100}
                     height={100}
-                    src="/images/next ui.png"
+                    src="/images/nextui.png"
                   />
                 </Tooltip>
 
