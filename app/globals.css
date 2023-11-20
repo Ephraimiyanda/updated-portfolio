@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+/* Reset styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+.grid_view{
+ grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+ grid-gap:26px;
+}
+.mystroke{
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  color: rgb(214, 219, 220);
+  letter-spacing: 5px;
+}
+.skill_grid{
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+}
