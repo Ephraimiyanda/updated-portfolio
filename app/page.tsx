@@ -20,6 +20,7 @@ import React from "react";
 import { useState } from "react";
 import plate from "../public/images/dugb_o5sj_230522.jpg";
 import { MailIcon } from "@/components/mailIcon";
+import MyImage from "@/components/myImg";
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const links = ["Home", "About Me", "Experience", "Projects", "Contact"];
@@ -457,12 +458,10 @@ export default function Home() {
                   color="default"
                   content={"Next UI"}
                 >
-                  <Image
-                    className="m-auto"
+                  <MyImage
                     width={100}
                     height={100}
                     src="/images/next ui.png"
-                    alt=""
                   />
                 </Tooltip>
 
