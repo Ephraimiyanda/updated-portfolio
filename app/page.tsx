@@ -86,7 +86,7 @@ export default function Home() {
     {
       title: "Kasuwa",
       imgSrc: "/images/Screenshot 2023-11-17 152442.png",
-      description: "An e-commerce website for buying ans selling agro products",
+      description: "An e-commerce website for buying and selling agro products",
       weblink: "https://e-gona.vercel.app/",
       gitlink: "https://github.com/Ephraimiyanda/e-gona",
       stacks: ["Next.js", "Tailwind CSS", "Next UI", "Typescript", "API"],
@@ -491,7 +491,7 @@ export default function Home() {
         <span className="text-3xl w-full text-center mx-auto font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-600 flex justify-center pt-10">My Experience</span>
         <div className="flex gap-3">
           <div className="flex flex-col gap-2">
-            <span className="w-8 h-11 text-center rounded-[50%] bg-gradient-to-br from-purple-400 to-blue-600  text-white">1</span>
+            <span className="w-8 h-8 text-center rounded-[50%] bg-gradient-to-br from-purple-400 to-blue-600  text-white">1</span>
             <div className="h-full w-1 bg-gradient-to-br from-purple-400 to-blue-600  m-auto"></div>
           </div>
 
@@ -514,7 +514,7 @@ export default function Home() {
         </div>
         <div className="flex gap-3">
         <div className="flex flex-col gap-2">
-            <span className="w-8 h-12 text-center rounded-[50%] bg-gradient-to-br from-purple-400 to-blue-600  text-white">2</span>
+            <span className="w-8 h-8 text-center rounded-[50%] bg-gradient-to-br from-purple-400 to-blue-600  text-white">2</span>
             <div className="h-full w-1 bg-gradient-to-br from-purple-400 to-blue-600  m-auto"></div>
           </div>
 
