@@ -119,7 +119,7 @@ export default function ProjectCard({
             startContent={<span>&#60;/{">"}</span>}
           ></Button>
         </div>
-        <div className="flex gap-1 flex-wrap">
+        <div className="flex gap-1 flex-wrap w-full">
           {stacks.map((stack: string,index:number) => (
             <Chip
             key={index}

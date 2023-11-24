@@ -21,8 +21,13 @@ import { useState } from "react";
 import plate from "../public/images/dugb_o5sj_230522.jpg";
 import { MailIcon } from "@/components/mailIcon";
 import MyImage from "@/components/myImg";
+
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
   const links = ["Home", "About Me", "Experience", "Projects", "Contact"];
   const projects = [
     {
@@ -177,7 +182,7 @@ export default function Home() {
           <div className="container w-1/2 flex flex-col gap-2">
             <span>Hi , i am</span>
             <h1 className="text-5xl font-mono font-bold">Ephraim Iyanda</h1>
-            <p>I&apos;m a Junior frontend engineer</p>
+            <p>A frontend engineer</p>
             <Button
               as={Link}
               href="#Contact"
@@ -227,11 +232,16 @@ export default function Home() {
             About Me
           </h2>
           <p>
-            I have been working as a frontend engineer for over 2+ years. With
-            expertise in HTML, CSS, and JavaScript. I have developed numerous
-            responsive and user-friendly websites. I am also proficient in
-            various frontend frameworks and libraries such as React, Next.js,
-            Tailwind CSS, and Bootstrap.
+            Hi there! 👋 I'm Ephraim Iyanda, a Junior Frontend Engineer with
+            over 2 years of hands-on experience. I specialize in crafting
+            visually appealing and responsive websites using technologies like
+            React, Next.js, and Tailwind CSS. My journey in tech has equipped me
+            with the skills to turn creative ideas into seamless user
+            experiences. Let's dive into my portfolio, where each project tells
+            a story of innovation and passion for code, where each project
+            reflects my commitment to excellence and showcases the skills that
+            make me stand out in the tech landscape. Let's build the future
+            together—one pixel at a time. 💻✨
           </p>
         </div>
       </section>
@@ -301,7 +311,7 @@ export default function Home() {
               </span>
               <p>
                 I can make changes to designs and functionality of already built
-                websited with more modern methods
+                websites with more modern methods
               </p>
             </div>
           </div>
@@ -458,11 +468,7 @@ export default function Home() {
                   color="default"
                   content={"Next UI"}
                 >
-                  <MyImage
-                    width={100}
-                    height={100}
-                    src="/images/nextui.png"
-                  />
+                  <MyImage width={100} height={100} src="/images/nextui.png" />
                 </Tooltip>
 
                 <Tooltip
@@ -488,51 +494,67 @@ export default function Home() {
       </section>
       <section id="Experience">
         <div className="max-w-[1280px] px-3 sm:px-6 mx-auto flex flex-col gap-3">
-        <span className="text-3xl w-full text-center mx-auto font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-600 flex justify-center pt-10">My Experience</span>
-        <div className="flex gap-3">
-          <div className="flex flex-col gap-2">
-            <span className="w-8 h-8 text-center rounded-[50%] bg-gradient-to-br from-purple-400 to-blue-600  text-white">1</span>
-            <div className="h-full w-1 bg-gradient-to-br from-purple-400 to-blue-600  m-auto"></div>
-          </div>
+          <span className="text-3xl w-full text-center mx-auto font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-600 flex justify-center pt-10">
+            My Experience
+          </span>
+          <div className="flex gap-3">
+            <div className="flex flex-col gap-2">
+              <span className="w-7 h-7 text-center rounded-[50%] bg-gradient-to-br from-purple-400 to-blue-600  text-white">
+                1
+              </span>
+              <div className="h-[80%] w-1 bg-gradient-to-br from-purple-400 to-blue-600  m-auto"></div>
+            </div>
 
-          <div>
-            
-            <span className="text-lg py-2 text-center mystroke stroke-[8px] stroke-transparent  font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-600">Nhub Nigeria</span>
-          <p>
-            I spent over 1+ year at Nhub Nigeria where i was a frontend developer
-            intern whre i earned a frontend developer certificate .During my
-            time at Nhub i was tasked with the responsibility of bdelivering
-            high-quailty,responsive web solutions by crafting visually stunning
-            and user interfaces. I also participated in pitch&apos;s, where we are
-            grouped into teams and asked to come up with business solutions to
-            real life problems which tech could solve (mainly the software part)
-            and how tech can solve them and then we collaborate as a team using
-            our tech skills to build the solutions
-          </p>
-          </div>
-          
-        </div>
-        <div className="flex gap-3">
-        <div className="flex flex-col gap-2">
-            <span className="w-8 h-8 text-center rounded-[50%] bg-gradient-to-br from-purple-400 to-blue-600  text-white">2</span>
-            <div className="h-full w-1 bg-gradient-to-br from-purple-400 to-blue-600  m-auto"></div>
-          </div>
+            <div>
+              <div className="flex flex-col md:flex-row justify start">
 
-          <div>
-          <span className="text-lg py-2 text-center mystroke stroke-[8px] stroke-transparent  font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-600">HNG Internship</span>
-          <p>
-            This is an internship which happens every year where developers sign
-            up and are given tasks by their mentors for a lenght of two months.
-            the internship is in stages and when you pass the previous stage you
-            get to move to the next stage . This internship is requires you to
-            have problem-solving skills,adaptation to new technology skills and
-            also colaborative skills for you to progress to other stages
-          </p>   
+              <span className=" text-left md:w-[250px] text-lg w-fit  mystroke stroke-[8px] stroke-transparent  font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-600">
+                Nhub Nigeria 
+              </span>
+              <span className="text-lg w-full font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-600 flex py-2 sm:py-0">- Frontend Developer Internship</span>
+              </div>
+              <p>
+                During my immersive tenure at NHub Nigeria, I earned a Frontend
+                Developer certificate while contributing significantly to the
+                development of high-quality, responsive web solutions. Tasked
+                with crafting visually stunning and user-friendly interfaces, I
+                thrived in delivering impactful solutions. Notably, I actively
+                participated in engaging pitches, collaborating with
+                cross-functional teams to develop innovative business solutions
+                through technology
+              </p>
+            </div>
           </div>
-         
+          <div className="flex gap-3">
+            <div className="flex flex-col gap-2">
+              <span className="w-7 h-7 text-center rounded-[50%] bg-gradient-to-br from-purple-400 to-blue-600  text-white">
+                2
+              </span>
+              <div className="h-[80%] w-1 bg-gradient-to-br from-purple-400 to-blue-600  m-auto"></div>
+            </div>
+
+            <div>
+              <div className="flex flex-col md:flex-row justify-start">
+               <span className="text-lg md:w-[300px] w-fit mystroke stroke-[8px] stroke-transparent  font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-600">
+                HNG Internship
+              </span>
+              <span className="text-lg w-full font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-600 flex py-2 sm:py-0 ">- Frontend Developer Internship</span> 
+              </div>
+              
+              <p>
+                Embarking on the HNG Internship journey, I demonstrated my
+                prowess in frontend development over a dynamic two-month period.
+                Successfully navigating through different stages of the
+                internship, I showcased strong problem-solving abilities,
+                adaptability to emerging technologies, and effective
+                collaboration skills. My journey at HNG was marked by continuous
+                learning, where I tackled diverse tasks and challenges,
+                enhancing my expertise and contributing to the vibrant tech
+                community.
+              </p>
+            </div>
+          </div>
         </div>
-        </div>
-       
       </section>
       <section id="Projects" className="w-full py-10">
         <div className="w-full max-w-[1280px]  px-3 sm:px-6 m-auto">
@@ -563,38 +585,45 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="Contact" className="bg-white" >
+      <section id="Contact" className="bg-white pb-10">
         <div className="container_form max-w-[1280px] px-3 sm:px-6 mx-auto flex flex-col gap-3">
-          <h2 className="text-3xl w-full text-center mx-auto font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-600 flex justify-center pt-10">Contact Me</h2>
+          <h2 className="text-3xl w-full text-center mx-auto font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-600 flex justify-center pt-10">
+            Contact Me
+          </h2>
           <p className="max-w-[600px] mx-auto text-center">
             If you have any questions or would like to discuss a potential
             project, feel free to get in touch.
           </p>
           <form className="flex flex-col gap-3 max-w-[600px] w-full mx-auto">
-              <Input
-          label="Name"
-          placeholder="Enter your name"
-          labelPlacement="outside"
-          variant="bordered"
-        />
-          <Input
-          type="email"
-          label="Email"
-          placeholder="you@example.com"
-          labelPlacement="outside"
-          variant="bordered"
-          startContent={
-            <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
-          }
-        />
-          <Textarea
-          variant="bordered"
-          label="Message"
-          labelPlacement="outside"
-          placeholder="Enter your Message"
-          className="col-span-12 md:col-span-6 mb-6 md:mb-0"
-        />
-            <Button type="submit" variant="bordered" color="secondary" className="btn w-[200px]">
+            <Input
+              label="Name"
+              placeholder="Enter your name"
+              labelPlacement="outside"
+              variant="bordered"
+            />
+            <Input
+              type="email"
+              label="Email"
+              placeholder="you@example.com"
+              labelPlacement="outside"
+              variant="bordered"
+              startContent={
+                <MailIcon className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
+              }
+            />
+            <Textarea
+              variant="bordered"
+              label="Message"
+              labelPlacement="outside"
+              placeholder="Enter your Message"
+              className="col-span-12 md:col-span-6 mb-6 md:mb-0"
+            />
+            <Button
+              type="submit"
+              variant="bordered"
+              color="secondary"
+              className="btn w-[200px]"
+            >
               Send Message
             </Button>
           </form>
