@@ -241,7 +241,7 @@ export default function Home() {
             a story of innovation and passion for code, where each project
             reflects my commitment to excellence and showcases the skills that
             make me stand out in the tech landscape. Let's build the future
-            together—one pixel at a time. 💻✨
+            together one pixel at a time. 💻✨
           </p>
         </div>
       </section>
@@ -311,7 +311,7 @@ export default function Home() {
               </span>
               <p>
                 I can make changes to designs and functionality of already built
-                websites with more modern methods
+                websites with more modern methods.
               </p>
             </div>
           </div>
@@ -521,7 +521,7 @@ export default function Home() {
                 thrived in delivering impactful solutions. Notably, I actively
                 participated in engaging pitches, collaborating with
                 cross-functional teams to develop innovative business solutions
-                through technology
+                through technology.
               </p>
             </div>
           </div>
