@@ -2,34 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-/* Reset styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+html,.nav_dropdown{
+ background-image: url(../public/images/my\ background.jpeg);
+color: white;
+
+}
+
+.nav_dropdown{
+  background-attachment: fixed;
+}
+.one:hover span {
+  width: 50%;
 }
 
 /* Global styles */
@@ -45,4 +33,10 @@ body {
 }
 .skill_grid{
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+}
+
+@media (min-width: 1024px) {
+.works_section .card-container:nth-child(2n+1){
+  flex-direction: row-reverse;
+}
 }

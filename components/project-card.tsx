@@ -20,6 +20,7 @@ import api from "../public/images/api-app-svgrepo-com.svg";
 import nextui from "../public/images/nextui.png";
 import internet from "../public/images/internet-svgrepo-com.svg";
 import tailwind from "../public/images/tailwind-css-logo-5AD4175897-seeklogo.com.png"
+import { motion, Variants } from "framer-motion";
 interface ProjectCardProps {
   title: string;
   img: string;
@@ -28,6 +29,9 @@ interface ProjectCardProps {
   gitlink: string;
   stacks: string[];
 }
+
+
+
 
 export default function ProjectCard({
   title,
@@ -74,57 +78,66 @@ export default function ProjectCard({
     }
     return <MyImage src={imageSrc} width={17} height={15} />;
   };
-
+  const item = {
+    hidden: { opacity: 0,x:40 },
+    show: { opacity: 1,x:0 }
+  }
   return (
-    <Card
-      className="p-0 max-w-[370px] m-auto max-h-[430px] h-[420px] bg-[#f5f5f5]"
-      style={{
-        padding: "0px",
+    <motion.li
+      className="card-container p-0  bg-transparent  lg:w-full flex flex-col lg:flex-row gap-3 xl:flex-wrap justify-between items-center m-auto lg:max-h-[430px] lg:h-[420px]  "
+      variants={{
+        hidden: { y: 60, opacity: 0 },
+        visible: { y: 0, opacity: 1 },
       }}
+      initial="hidden"
+      whileInView="visible"
+      transition={{ ease: "linear", delay: 0.8 }}
+      viewport={{ once: false }}
     >
-      <CardBody className="p-0 overflow-y-hidden flex-[none]">
+      <div className="p-0 w-full lg:w-[45%] lg:min-w-[400px] overflow-y-hidden flex-[none]">
         <Image
           isZoomed
           shadow="sm"
           radius="none"
           width="100%"
           alt={title}
-          className="w-full object-cover h-[220px]  rounded-s-none rounded-e-none overflow-y-hidden"
+          className="w-full object-cover min-h-[250px] sm:min-h-[350px] max-w-[650px]  rounded-s-none rounded-e-none overflow-y-hidden"
           src={img}
         ></Image>
-      </CardBody>
-      <CardFooter className="text-small text-left items-start flex flex-col gap-2 justify-between ">
-        <div className="h-[60px] mb-auto">
-          <b>{title}</b>
-        <p className="text-black text-sm">{description}</p>   
+      </div>
+      <div className="text-small lg:w-[45%] w-full text-white text-left items-start flex flex-col gap-2 justify-between  ">
+        <div className="sm:w-[500px] bg-opacity-10 mb-auto bg-[#2b084c]  p-3">
+          <b className="text-2xl text-[#a800fe]">{title}</b>
+          <p className="text-base">{description}</p>
         </div>
-       
-        <div className="flex gap-2">
+
+        <div className="flex gap-2 font-bold p-3">
           <Button
             as={Link}
             href={weblink}
-            isIconOnly
-            color="primary"
-            variant="flat"
-            className="border border-blue-400"
+            className=" bg-[#a800fe]  font-semibold text-white"
             startContent={<MyImage src={internet} width={22} height={22} />}
-          ></Button>
+            radius="none"
+          >
+            View Live Site
+          </Button>
           <Button
             as={Link}
-            isIconOnly
-            color="warning"
             variant="flat"
-            className="border border-orange-400"
+            className="border border-[#a800fe]  font-semibold text-[#a800fe] bg-[#a800fe] bg-opacity-10"
             href={gitlink}
             startContent={<span>&#60;/{">"}</span>}
-          ></Button>
+            radius="none"
+          >
+            View Source
+          </Button>
         </div>
-        <div className="flex gap-1 flex-wrap w-full">
-          {stacks.map((stack: string,index:number) => (
+        <div className="flex gap-1 flex-wrap w-full p-3">
+          {stacks.map((stack: string, index: number) => (
             <Chip
-            key={index}
+              key={index}
               endContent={ImageComponent(stack)}
-              variant="flat"
+              variant="solid"
               color="secondary"
               radius="sm"
               className="w-fit px-1"
@@ -133,7 +146,7 @@ export default function ProjectCard({
             </Chip>
           ))}
         </div>
-      </CardFooter>
-    </Card>
+      </div>
+    </motion.li>
   );
 }
