@@ -31,7 +31,7 @@ export default function Index() {
     return (
       <section
         id="Home"
-        className="py-10 md:h-screen flex-col flex items-center justify-between w-full text-white"
+        className="md:py-10 py-20 md:h-screen flex-col flex items-center justify-between w-full text-white"
       >
         <div className=" flex flex-wrap sm:flex-row flex-col justify-between items-center  px-3 sm:px-6 max-w-[1280px] w-full m-auto">
           <div className="w-full flex sm:gap-6 gap-3 ">
