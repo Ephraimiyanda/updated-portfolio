@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <section
       id="Contact"
-      className=" pb-10 flex flex-col items-center h-screen"
+      className=" py-10 flex flex-col items-center md:h-screen md:absolute h-full w-full"
     >
       <div className="container_form max-w-[1280px] px-3 md:px-6 mx-auto flex flex-col items-start justify-center gap-3 h-full">
         <div className="flex items-start max-w-[1000px] w-full justify-between md:flex-row flex-col md:bg-transparent bg-[#a800fe]  bg-opacity-20 md:rounded-none  rounded-xl  mx-auto">

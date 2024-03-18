@@ -21,7 +21,8 @@ export default function Nav() {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="xl"
-      className="absolute w-full bg-transparent"
+      className="md:absolute top-[0] w-full bg-black"
+      
     >
       <NavbarContent justify="start">
         <NavbarBrand>

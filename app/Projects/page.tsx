@@ -116,7 +116,7 @@ export default function Works() {
         // Add more projects here...
       ];
     return (
-      <div className="absolute bottom-[0]  overflow-y-scroll pt-8 pb-16 w-full mx-auto h-[92vh]">
+      <div className="md:absolute md:bottom-[0]  overflow-y-scroll pt-8 pb-16 w-full mx-auto md:h-[92vh]">
         <p className="text-4xl font-semibold text-white text-center py-6">
           <span className="text-[#a800fe] ">My </span>
           <span className="border-b-4 border-b-[#a800fe] pb-1">Works</span>

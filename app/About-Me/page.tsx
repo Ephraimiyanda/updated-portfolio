@@ -7,7 +7,7 @@ import { GiSkills } from "react-icons/gi";
 import { MdOutlineDesignServices } from "react-icons/md";
 export default function About() {
     return (
-      <div className="py-10 h-[92vh] overflow-y-auto text-white absolute bottom-[0] pt-8 pb-16 w-full mx-auto ">
+      <div className="py-10  md:h-[92vh] overflow-y-auto text-white md:absolute bottom-[0] pt-8 pb-20 w-full mx-auto ">
         <section id="About Me">
           <div className="max-w-[1280px] py-10 m-auto flex flex-col gap-2  px-3 sm:px-6">
             <h2 className="text-3xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-600">
