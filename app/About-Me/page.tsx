@@ -263,10 +263,10 @@ export default function About() {
               </span>
               <div className="flex gap-3">
                 <div className="flex flex-col gap-2">
-                  <span className="w-7 h-7 text-center rounded-[50%] bg-gradient-to-br from-purple-400 to-blue-600  text-white">
+                  <span className="w-8 h-8 text-center flex justify-center items-center  rounded-[50%] bg-gradient-to-br from-purple-400 to-blue-600  text-white">
                     1
                   </span>
-                  <div className="h-[80%] w-1 bg-gradient-to-br from-purple-400 to-blue-600  m-auto"></div>
+                  <div className="h-[60%] w-1 bg-gradient-to-br from-purple-400 to-blue-600  m-auto"></div>
                 </div>
 
                 <div>
@@ -292,10 +292,10 @@ export default function About() {
               </div>
               <div className="flex gap-3">
                 <div className="flex flex-col gap-2 ">
-                  <span className="w-7 h-7 text-center rounded-[50%] bg-gradient-to-br from-purple-400 to-blue-600  text-white">
+                  <span className="w-8 h-8 flex justify-center items-center rounded-[50%] bg-gradient-to-br from-purple-400 to-blue-600  text-white">
                     2
                   </span>
-                  <div className="h-[80%] w-1 bg-gradient-to-br from-purple-400 to-blue-600  m-auto"></div>
+                  <div className="h-[60%] w-1 bg-gradient-to-br from-purple-400 to-blue-600  m-auto"></div>
                 </div>
 
                 <div>

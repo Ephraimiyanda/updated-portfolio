@@ -22,7 +22,6 @@ export default function Nav() {
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="xl"
       className="md:absolute top-[0] w-full bg-black"
-      
     >
       <NavbarContent justify="start">
         <NavbarBrand>
@@ -66,6 +65,16 @@ export default function Nav() {
           >
             Home
           </Link>
+          <span
+            className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-[#a800fe] 
+              
+              "
+          ></span>
+          <span
+            className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-[#a800fe] 
+              
+              "
+          ></span>
         </NavbarMenuItem>
         <NavbarMenuItem className="relative one w-max hover:text-[#a800fe] ">
           <Link
@@ -76,6 +85,16 @@ export default function Nav() {
           >
             About Me
           </Link>
+          <span
+            className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-[#a800fe] 
+              
+              "
+          ></span>
+          <span
+            className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-[#a800fe] 
+              
+              "
+          ></span>
         </NavbarMenuItem>
 
         {links.map((link) => (
