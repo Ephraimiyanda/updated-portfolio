@@ -7,6 +7,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
 import { motion } from "framer-motion";
+
 export default function Index() {
   const container = {
     hidden: { opacity: 1, scale: 0 },
@@ -14,7 +15,7 @@ export default function Index() {
       opacity: 1,
       scale: 1,
       transition: {
-        ease:"linear",
+        ease: "easeInOut",
         delayChildren: 0.7,
         staggerChildren: 0.5,
       },
@@ -69,10 +70,10 @@ export default function Index() {
                     <FaLinkedin size={38} />
                   </Link>
 
-                  <Link href="https://twitter.com/the_realzik">
+                  <Link href="https://twitter.com/crazy_bugdev">
                     <FaXTwitter size={38} />
                   </Link>
-                  <Link href="iyandaephraim@gmail.com">
+                  <Link type="email" href="mailto:iyandaephraim@gmail.com">
                     <TfiEmail size={38} />
                   </Link>
                 </div>

@@ -1,11 +1,65 @@
+"use client";
 import { MailIcon } from "@/components/mailIcon";
 import { Button, Input, Textarea } from "@nextui-org/react";
 import { IoLogoGithub } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
+import { useState } from "react";
 import Link from "next/link";
+
 export default function Contact() {
+  const [personName, setPersonName] = useState("");
+  const [message, setMessage] = useState("");
+  const [personEmail, setPersonEmail] = useState("");
+  const [status, setStatus] = useState("normal");
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setStatus("sending");
+    const data = {
+      personName: personName,
+      personEmail: personEmail,
+      message: message,
+    };
+
+    try {
+      const response = await fetch("/api/contactApi", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+        body: JSON.stringify(data),
+      });
+      const res = await response.json();
+      if (response.status === 200) {
+        setStatus("sent");
+      } else {
+        setStatus("failed");
+      }
+      //  console.log("Response received");
+      //  console.log("Response succeeded!");
+      //  setPersonName("");
+      //  setPersonEmail("");
+      //  setMessage("");
+    } catch (err: any) {
+      setStatus("failed");
+      console.error("Error sending email:", err);
+    }
+  };
+
+  function messageStatus() {
+    if (status === "normal") {
+      return "send Message";
+    } else if (status === "failed") {
+      return "retry";
+    } else if (status === "sent") {
+      return "message sent";
+    } else if (status === "sending") {
+      return "sending message";
+    }
+  }
+
   return (
     <section
       id="Contact"
@@ -38,16 +92,19 @@ export default function Contact() {
                 <FaLinkedin size={38} color="white" />
               </Link>
 
-              <Link href="https://twitter.com/the_realzik">
+              <Link href="https://twitter.com/crazy_bugdev">
                 <FaXTwitter size={38} color="white" />
               </Link>
-              <Link href="iyandaephraim@gmail.com">
+              <a type="ty" href="mailto:iyandaephraim@gmail.com">
                 <TfiEmail size={38} color="white" />
-              </Link>
+              </a>
             </div>
           </div>
 
-          <form className="flex flex-col gap-4 md:min-w-[400px] w-full mx-auto text-white p-6 py-14 md:bg-[#a800fe]  md:rounded-xl shadow-lg md:bg-opacity-20">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-4 md:min-w-[400px] w-full mx-auto text-white p-6 py-14 md:bg-[#a800fe]  md:rounded-xl shadow-lg md:bg-opacity-20"
+          >
             <Input
               label="Name"
               placeholder="Enter your name"
@@ -58,6 +115,8 @@ export default function Contact() {
               classNames={{
                 label: "text-white dark:text-white text-lg",
               }}
+              value={personName}
+              onChange={(e) => setPersonName(e.target.value)}
             />
             <Input
               type="email"
@@ -71,9 +130,10 @@ export default function Contact() {
               className="text-white"
               classNames={{
                 label: "text-white dark:text-white text-lg",
-                inputWrapper: ["dark:group-data-[focused=true]:border-white"],
               }}
               color="secondary"
+              value={personEmail}
+              onChange={(e) => setPersonEmail(e.target.value)}
             />
             <Textarea
               variant="bordered"
@@ -85,14 +145,18 @@ export default function Contact() {
                 label: "text-white dark:text-white text-lg",
               }}
               color="secondary"
+              id="message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               maxRows={4}
             />
             <Button
+              isLoading={status === "sending" && true}
               type="submit"
               variant="bordered"
               className="btn w-[200px] text-[#a800fe] border-[#a800fe]"
             >
-              Send Message
+              {messageStatus()}
             </Button>
           </form>
         </div>
