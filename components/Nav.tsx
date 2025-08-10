@@ -9,40 +9,34 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/react";
 import Link from "next/link";
-import { useState } from "react";
-import { IoDocumentTextOutline } from "react-icons/io5";
+import { useMenu } from "@/context/MenuContext";
 import ThemeController from "./ThemeController";
+
 export default function Nav() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isMenuOpen, toggleMenu, closeMenu } = useMenu();
   const links = ["Projects", "Contact"];
+
   return (
     <Navbar
       isBlurred={false}
       isBordered={false}
       isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen}
+      onMenuOpenChange={toggleMenu}
       maxWidth="xl"
-      className="md:absolute top-[0] w-full bg-black"
+      className="md:absolute top-[0] w-full bg-black/80 backdrop-blur-md border-b border-white/10"
     >
       <NavbarContent justify="start">
         <NavbarBrand>
-          <p className=" sm:text-3xl text-xl font-extrabold text-[#a800fe]">
-            MY PORTFOLIO
-          </p>
+          <Link href="/" className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-blue-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">EI</span>
+            </div>
+            <span className="text-white font-semibold text-lg hidden sm:block">Ephraim Iyanda</span>
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent justify="end">
-        <NavbarItem
-          className="flex justify-center items-center gap-2"
-          as={Link}
-          href={
-            "https://drive.google.com/file/d/1FSBn17QT6MWQXpFA8mwnFQ6zXUxvrIu2/view?usp=drivesdk"
-          }
-        >
-          <IoDocumentTextOutline color="white" size={32} />
-          <span className="text-white">My CV</span>
-        </NavbarItem>
         <NavbarItem className="hidden md:flex">
           <ThemeController />
         </NavbarItem>
@@ -56,74 +50,44 @@ export default function Nav() {
       >
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="text-bold text-lg text-white bg-[#a800fe] h-12 w-12 rounded-[50%]"
+          className="text-bold text-lg text-white bg-gradient-to-br from-purple-400 to-blue-600 h-12 w-12 rounded-full hover:scale-105 transition-transform"
         />
       </NavbarContent>
-      <NavbarMenu className="flex flex-col gap-6 justify-center items-center text-3xl font-mono nav_dropdown">
-        <NavbarMenuItem className="relative one w-max hover:text-[#a800fe] ">
+      <NavbarMenu className="flex flex-col gap-8 justify-center items-center text-3xl font-mono nav_dropdown backdrop-blur-xl">
+        <NavbarMenuItem className="relative nav-item w-max">
           <Link
             color="foreground"
             href={"/"}
-            onClick={() => setIsMenuOpen(false)}
-            className="text-5xl font-bold "
+            onClick={closeMenu}
+            className="text-5xl font-bold hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-600 transition-all duration-300"
           >
             Home
           </Link>
-          <span
-            className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-[#a800fe] 
-              
-              "
-          ></span>
-          <span
-            className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-[#a800fe] 
-              
-              "
-          ></span>
         </NavbarMenuItem>
-        <NavbarMenuItem className="relative one w-max hover:text-[#a800fe] ">
+        <NavbarMenuItem className="relative nav-item w-max">
           <Link
             color="foreground"
             href={"/About-Me"}
-            onClick={() => setIsMenuOpen(false)}
-            className="text-5xl font-bold "
+            onClick={closeMenu}
+            className="text-5xl font-bold hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-600 transition-all duration-300"
           >
             About Me
           </Link>
-          <span
-            className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-[#a800fe] 
-              
-              "
-          ></span>
-          <span
-            className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-[#a800fe] 
-              
-              "
-          ></span>
         </NavbarMenuItem>
 
         {links.map((link) => (
           <NavbarMenuItem
             key={link}
-            className="relative one w-max hover:text-[#a800fe] "
+            className="relative nav-item w-max"
           >
             <Link
               color="foreground"
               href={link}
-              onClick={() => setIsMenuOpen(false)}
-              className="text-5xl font-bold "
+              onClick={closeMenu}
+              className="text-5xl font-bold hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-400 hover:to-blue-600 transition-all duration-300"
             >
               {link}
             </Link>
-            <span
-              className="absolute -bottom-1 left-1/2 w-0 transition-all h-1 bg-[#a800fe] 
-              
-              "
-            ></span>
-            <span
-              className="absolute -bottom-1 right-1/2 w-0 transition-all h-1 bg-[#a800fe] 
-              
-              "
-            ></span>
           </NavbarMenuItem>
         ))}
         <NavbarMenuItem className="mt-8">

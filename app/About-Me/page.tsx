@@ -5,6 +5,10 @@ import { GrVmMaintenance } from "react-icons/gr";
 import { LiaConnectdevelop } from "react-icons/lia";
 import { GiSkills } from "react-icons/gi";
 import { MdOutlineDesignServices } from "react-icons/md";
+import { IoDocumentTextOutline } from "react-icons/io5";
+import { Button } from "@nextui-org/react";
+import Link from "next/link";
+
 export default function About() {
     return (
       <div className="py-10  md:h-[92vh] overflow-y-auto text-white md:absolute bottom-[0] pt-8 pb-20 w-full mx-auto ">
@@ -17,16 +21,31 @@ export default function About() {
               </p>
             </h2>
             <p>
-              Hi there! 👋 I&apos;m Ephraim Iyanda, a Frontend Engineer with
-              over 3+ years of hands-on experience. I specialize in crafting
-              visually appealing and responsive websites using technologies like
-              React, Next.js, and Tailwind CSS. My journey in tech has equipped
-              me with the skills to turn creative ideas into seamless user
-              experiences. Let&apos;s dive into my portfolio, where each project
-              tells a story of innovation and passion for code, where each
-              project reflects my commitment to excellence and showcases the
-              skills that make me stand out in the tech landscape. Let&apos;s
-              build the future together—one pixel at a time. 💻✨
+              Welcome! I&apos;m Ephraim Iyanda, a passionate Frontend Engineer with over 3 years of experience 
+              crafting exceptional digital experiences. I specialize in building modern, responsive web applications 
+              using cutting-edge technologies like React, Next.js, TypeScript, and Tailwind CSS.
+            </p>
+            <p className="mt-4">
+              My expertise lies in transforming complex ideas into intuitive, user-friendly interfaces that not only 
+              look stunning but also deliver outstanding performance. I&apos;m driven by the challenge of solving 
+              real-world problems through code and creating digital solutions that make a meaningful impact.
+            </p>
+            <p className="mt-4">
+              Whether it&apos;s developing scalable web applications, optimizing user experiences, or collaborating 
+              with cross-functional teams, I bring creativity, technical excellence, and attention to detail to 
+              every project. Let&apos;s build something amazing together! 🚀
+            </p>
+            
+            <div className="mt-8">
+              <Button
+                as={Link}
+                href="https://drive.google.com/file/d/1FSBn17QT6MWQXpFA8mwnFQ6zXUxvrIu2/view?usp=drivesdk"
+                target="_blank"
+                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold hover:scale-105 transition-transform shadow-lg"
+                startContent={<IoDocumentTextOutline size={20} />}
+              >
+                Download My Resume
+              </Button>
             </p>
           </div>
         </section>
@@ -223,33 +242,35 @@ export default function About() {
                 <div className="perks-div text-center max-w-[350px] m-auto">
                   <span className="flex gap-2 justify-center items-center">
                     <MdOutlineDesignServices size={32} />
-                    <p className="text-3xl font-medium ">DESIGN</p>
+                    <p className="text-3xl font-medium">UI/UX DESIGN</p>
                   </span>
                   <p>
-                    I can design the site based on your needs and suggestions. I
-                    can also design the site from scratch and consult you during
-                    the job.
+                    I create intuitive and visually appealing user interfaces that prioritize user experience. 
+                    From wireframes to high-fidelity prototypes, I ensure every design decision enhances usability 
+                    and accessibility while maintaining aesthetic excellence.
                   </p>
                 </div>
                 <div className="perks-div text-center max-w-[350px] m-auto">
                   <span className="flex gap-2 justify-center items-center">
                     <LiaConnectdevelop size={32} />
-                    <p className="text-3xl font-medium">DEVELOPEMENT</p>
+                    <p className="text-3xl font-medium">DEVELOPMENT</p>
                   </span>
                   <p>
-                    I can build the site based on your designs,specifications
-                    and suggestions from scratch.
+                    I transform designs into fully functional, responsive web applications using modern technologies. 
+                    My development approach focuses on clean code, optimal performance, and scalable architecture 
+                    that grows with your business needs.
                   </p>
                 </div>
               </div>
               <div className="perks-div text-center max-w-[350px] m-auto">
                 <span className="flex gap-2 justify-center items-center">
                   <GrVmMaintenance size={32} />
-                  <p className="text-3xl font-medium"> MAINTENANCE</p>
+                  <p className="text-3xl font-medium">OPTIMIZATION</p>
                 </span>
                 <p>
-                  I can make changes to designs and functionality of already
-                  built websites with more modern methods
+                  I enhance existing applications with performance optimizations, modern best practices, and 
+                  feature upgrades. From legacy code refactoring to implementing new technologies, I ensure 
+                  your digital presence stays current and competitive.
                 </p>
               </div>
             </div>
@@ -279,14 +300,11 @@ export default function About() {
                     </span>
                   </div>
                   <p>
-                    During my immersive tenure at NHub Nigeria, I earned a
-                    Frontend Developer certificate while contributing
-                    significantly to the development of high-quality, responsive
-                    web solutions. Tasked with crafting visually stunning and
-                    user-friendly interfaces, I thrived in delivering impactful
-                    solutions. Notably, I actively participated in engaging
-                    pitches, collaborating with cross-functional teams to
-                    develop innovative business solutions through technology
+                    At NHub Nigeria, I completed an intensive Frontend Developer program where I honed my skills 
+                    in modern web development. I contributed to multiple high-impact projects, developing responsive 
+                    web applications and collaborating with diverse teams to deliver innovative tech solutions. 
+                    This experience strengthened my ability to work in fast-paced environments and deliver 
+                    quality results under tight deadlines.
                   </p>
                 </div>
               </div>
@@ -309,15 +327,11 @@ export default function About() {
                   </div>
 
                   <p>
-                    Embarking on the HNG Internship journey, I demonstrated my
-                    prowess in frontend development over a dynamic two-month
-                    period. Successfully navigating through different stages of
-                    the internship, I showcased strong problem-solving
-                    abilities, adaptability to emerging technologies, and
-                    effective collaboration skills. My journey at HNG was marked
-                    by continuous learning, where I tackled diverse tasks and
-                    challenges, enhancing my expertise and contributing to the
-                    vibrant tech community.
+                    The HNG Internship was a transformative experience that challenged me to push my technical 
+                    boundaries. Over two intensive months, I successfully completed multiple stages of increasingly 
+                    complex tasks, demonstrating proficiency in React, API integration, and collaborative development. 
+                    This program enhanced my problem-solving skills and exposed me to industry-standard practices 
+                    in a competitive, fast-paced environment.
                   </p>
                 </div>
               </div>

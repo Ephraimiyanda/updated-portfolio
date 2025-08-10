@@ -8,8 +8,9 @@ export default function Works() {
          show: {
            opacity: 1,
            transition: {
-             delayChildren: 0.8,
-             duration: 0.8,
+            delayChildren: 0.3,
+            staggerChildren: 0.2,
+            duration: 0.6,
            },
          },
        };
@@ -127,7 +128,7 @@ export default function Works() {
             viewport={{ once: false }}
             initial="hidden"
             whileInView="show"
-            className="works_section flex flex-col gap-6  bg-transparent items-center justify-center w-full overflow-x-hidden mx-auto sm:px-6 px-3 overflow-hidden "
+            className="works_section flex flex-col gap-8 bg-transparent items-center justify-center w-full overflow-x-hidden mx-auto sm:px-6 px-3 overflow-hidden"
           >
             {projects.map((project, index) => (
               <ProjectCard

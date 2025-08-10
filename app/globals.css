@@ -79,15 +79,34 @@ html.light.bg-orange {
 .nav_dropdown {
   background-image: url(../public/images/my\ background.jpeg);
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
-
 html.light .nav_dropdown {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   background-attachment: fixed;
 }
 
-.one:hover span {
-  width: 50%;
+/* Navigation item hover effects */
+.nav-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #a855f7, #3b82f6);
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::before {
+  width: 100%;
 }
 
 /* Global styles */
@@ -126,8 +145,41 @@ html.light .border-[#a800fe] {
   border-color: #7c3aed !important;
 }
 
-@media (min-width: 1024px) {
-.works_section .card-container:nth-child(2n+1){
-  flex-direction: row-reverse;
+/* Enhanced card animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
+
+.card-container:hover {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #a855f7, #3b82f6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #9333ea, #2563eb);
+}
+@media (min-width: 1024px) {
+  .works_section .card-container:nth-child(2n+1){
+    flex-direction: row-reverse;
+  }
 }

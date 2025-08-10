@@ -7,8 +7,11 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
 import { motion } from "framer-motion";
+import { useMenu } from "@/context/MenuContext";
 
 export default function Index() {
+  const { openMenu } = useMenu();
+
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -82,11 +85,10 @@ export default function Index() {
               <motion.li variants={item}>
                 <div className="flex gap-3 py-2">
                   <Button
-                    as={Link}
-                    href="#Contact"
+                    onClick={openMenu}
                     radius="none"
                     variant="solid"
-                    className="w-[150px] font-semibold bg-[#a800fe] text-white"
+                    className="w-[150px] font-semibold bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:scale-105 transition-transform shadow-lg"
                   >
                     Explore
                   </Button>
@@ -95,7 +97,7 @@ export default function Index() {
                     href="/Contact"
                     radius="none"
                     variant="bordered"
-                    className="w-[150px] font-semibold border-[#a800fe] text-[#a800fe]"
+                    className="w-[150px] font-semibold border-purple-500 text-purple-500 hover:bg-purple-500/10 transition-all"
                   >
                     Get In Touch
                   </Button>

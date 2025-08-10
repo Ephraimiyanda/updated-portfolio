@@ -4,6 +4,7 @@ import './globals.css'
 import Nav from '../components/Nav'
 import Footer from '../components/footer'
 import { ThemeProvider } from '@/context/ThemeContext'
+import { MenuProvider } from '@/context/MenuContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,9 +22,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider>
-          <Nav />
-          {children}
-          <Footer />
+          <MenuProvider>
+            <Nav />
+            {children}
+            <Footer />
+          </MenuProvider>
         </ThemeProvider>
       </body>
     </html>
