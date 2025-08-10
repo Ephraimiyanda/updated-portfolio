@@ -7,15 +7,85 @@
   margin: 0;
   padding: 0;
 }
-html,.nav_dropdown{
- background-image: url(../public/images/my\ background.jpeg);
-color: white;
 
+/* Default theme (dark) */
+html {
+  background-image: url(../public/images/my\ background.jpeg);
+  color: white;
+  transition: background-color 0.3s ease, background-image 0.3s ease;
 }
 
-.nav_dropdown{
+/* Light theme */
+html.light {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #1a1a1a;
+}
+
+html.light .nav_dropdown {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+/* Background color schemes for dark theme */
+html.dark.bg-default {
+  background-image: url(../public/images/my\ background.jpeg);
+}
+
+html.dark.bg-blue {
+  background: linear-gradient(135deg, #0c4a6e 0%, #1e3a8a 50%, #1e1b4b 100%);
+}
+
+html.dark.bg-purple {
+  background: linear-gradient(135deg, #581c87 0%, #7c3aed 50%, #3730a3 100%);
+}
+
+html.dark.bg-green {
+  background: linear-gradient(135deg, #14532d 0%, #16a34a 50%, #166534 100%);
+}
+
+html.dark.bg-red {
+  background: linear-gradient(135deg, #7f1d1d 0%, #dc2626 50%, #991b1b 100%);
+}
+
+html.dark.bg-orange {
+  background: linear-gradient(135deg, #9a3412 0%, #ea580c 50%, #c2410c 100%);
+}
+
+/* Background color schemes for light theme */
+html.light.bg-default {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+html.light.bg-blue {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 50%, #93c5fd 100%);
+}
+
+html.light.bg-purple {
+  background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 50%, #c4b5fd 100%);
+}
+
+html.light.bg-green {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 50%, #86efac 100%);
+}
+
+html.light.bg-red {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 50%, #fca5a5 100%);
+}
+
+html.light.bg-orange {
+  background: linear-gradient(135deg, #fed7aa 0%, #fdba74 50%, #fb923c 100%);
+}
+
+.nav_dropdown {
+  background-image: url(../public/images/my\ background.jpeg);
   background-attachment: fixed;
 }
+
+
+html.light .nav_dropdown {
+  background-attachment: fixed;
+}
+
 .one:hover span {
   width: 50%;
 }
@@ -33,6 +103,27 @@ color: white;
 }
 .skill_grid{
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+}
+
+/* Ensure text remains visible in light theme */
+html.light .text-white {
+  color: #1a1a1a !important;
+}
+
+html.light .text-[#a800fe] {
+  color: #7c3aed !important;
+}
+
+html.light .border-b-[#a800fe] {
+  border-bottom-color: #7c3aed !important;
+}
+
+html.light .bg-[#a800fe] {
+  background-color: #7c3aed !important;
+}
+
+html.light .border-[#a800fe] {
+  border-color: #7c3aed !important;
 }
 
 @media (min-width: 1024px) {

@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import { IoDocumentTextOutline } from "react-icons/io5";
+import ThemeController from "./ThemeController";
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const links = ["Projects", "Contact"];
@@ -41,6 +42,9 @@ export default function Nav() {
         >
           <IoDocumentTextOutline color="white" size={32} />
           <span className="text-white">My CV</span>
+        </NavbarItem>
+        <NavbarItem className="hidden md:flex">
+          <ThemeController />
         </NavbarItem>
       </NavbarContent>
       <NavbarContent
@@ -122,6 +126,9 @@ export default function Nav() {
             ></span>
           </NavbarMenuItem>
         ))}
+        <NavbarMenuItem className="mt-8">
+          <ThemeController />
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );
