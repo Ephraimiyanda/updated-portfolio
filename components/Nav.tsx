@@ -12,15 +12,21 @@ import Link from "next/link";
 import { useMenu } from "@/context/MenuContext";
 import ThemeController from "./ThemeController";
 
+import { useMenu } from "@/context/MenuContext";
+import ThemeController from "./ThemeController";
+
 export default function Nav() {
   const { isMenuOpen, toggleMenu, closeMenu } = useMenu();
+  const { isMenuOpen, toggleMenu, closeMenu } = useMenu();
   const links = ["Projects", "Contact"];
+
 
   return (
     <Navbar
       isBlurred={false}
       isBordered={false}
       isMenuOpen={isMenuOpen}
+      onMenuOpenChange={toggleMenu}
       onMenuOpenChange={toggleMenu}
       maxWidth="xl"
       className="md:absolute top-[0] w-full bg-none"
@@ -58,6 +64,8 @@ export default function Nav() {
       </NavbarContent>
       <NavbarMenu className="flex flex-col gap-8 justify-center items-center text-3xl font-mono nav_dropdown backdrop-blur-xl">
         <NavbarMenuItem className="relative nav-item w-max">
+      <NavbarMenu className="flex flex-col gap-8 justify-center items-center text-3xl font-mono nav_dropdown backdrop-blur-xl">
+        <NavbarMenuItem className="relative nav-item w-max">
           <Link
             color="foreground"
             href={"/"}
@@ -67,6 +75,7 @@ export default function Nav() {
             Home
           </Link>
         </NavbarMenuItem>
+        <NavbarMenuItem className="relative nav-item w-max">
         <NavbarMenuItem className="relative nav-item w-max">
           <Link
             color="foreground"

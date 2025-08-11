@@ -8,8 +8,11 @@ import { FaXTwitter } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
 import { motion } from "framer-motion";
 import { useMenu } from "@/context/MenuContext";
+import { useMenu } from "@/context/MenuContext";
 
 export default function Index() {
+  const { openMenu } = useMenu();
+
   const { openMenu } = useMenu();
 
   const container = {
