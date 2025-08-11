@@ -34,13 +34,6 @@ export default function RootLayout({
             <Footer />
           </MenuProvider>
         </ThemeProvider>
-        <ThemeProvider>
-          <MenuProvider>
-            <Nav />
-            {children}
-            <Footer />
-          </MenuProvider>
-        </ThemeProvider>
       </body>
     </html>
   );
