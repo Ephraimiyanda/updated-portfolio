@@ -371,7 +371,7 @@ export default function About() {
             ].map((exp, i) => (
               <div
                 key={i}
-                className="backdrop-blur-sm bg-black/10 rounded-xl shadow-lg p-6 flex flex-col gap-4 border border-[#a800fe]/50"
+                className="backdrop-blur-sm bg-white/10 rounded-xl shadow-lg p-6 flex flex-col gap-4 border border-[#a800fe]/50"
               >
                 <div>
                   <h3 className="text-xl font-semibold">{exp.company}</h3>
@@ -389,12 +389,17 @@ export default function About() {
                 </ul>
                 <div className="flex flex-wrap gap-2 pt-2">
                   {exp.skills.map((skill, idx) => (
-                    <span
+                    <Chip
+                      classNames={{
+                        base: "text-white dark:text-white",
+                        content: "",
+                      }}
+                      color="secondary"
+                      variant="faded"
                       key={idx}
-                      className="px-3 py-1 text-sm rounded-full bg-gradient-to-br from-purple-400 to-blue-600 text-white"
                     >
                       {skill}
-                    </span>
+                    </Chip>
                   ))}
                 </div>
               </div>
