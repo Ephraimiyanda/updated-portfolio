@@ -25,7 +25,7 @@ export default function About() {
             Welcome👋! I&apos;m Ephraim Iyanda, Frontend Engineer focused on
             crafting exceptional digital experiences. I specialize in building
             modern, responsive web applications using cutting-edge frontend
-            technologies. I'm also a Suns and Arsenal fan.
+            technologies. I&apos;m also a Suns and Arsenal fan.
           </p>
           <p className="mt-4">
             My expertise lies in transforming complex ideas into intuitive,
@@ -35,13 +35,14 @@ export default function About() {
             solutions that make a meaningful impact.
           </p>
           <p className="mt-4">
-            Whether it’s crafting landing pages or building complex, multi-page
-            applications, I specialize in developing and optimizing scalable web
-            solutions that deliver exceptional user experiences. I thrive on
-            collaborating with cross-functional teams, combining creativity with
-            technical precision to produce results that are both functional and
-            visually captivating. Every project is an opportunity to innovate,
-            refine, and exceed expectations.let’s bring your vision to life! 🚀
+            Whether it&apos;s crafting landing pages or building complex,
+            multi-page applications, I specialize in developing and optimizing
+            scalable web solutions that deliver exceptional user experiences. I
+            thrive on collaborating with cross-functional teams, combining
+            creativity with technical precision to produce results that are both
+            functional and visually captivating. Every project is an opportunity
+            to innovate, refine, and exceed expectations.let&apos;s bring your
+            vision to life! 🚀
           </p>
 
           <div className="mt-8">

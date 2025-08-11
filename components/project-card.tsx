@@ -77,35 +77,6 @@ export default function ProjectCard({
     return <MyImage src={imageSrc} width={17} height={15} />;
   };
 
-  const getStackColor = (stack: string) => {
-    switch (stack) {
-      case "HTML":
-        return "bg-gradient-to-r from-orange-500 to-red-500";
-      case "CSS":
-        return "bg-gradient-to-r from-blue-500 to-cyan-500";
-      case "JavaScript":
-        return "bg-gradient-to-r from-yellow-400 to-orange-500";
-      case "Sass":
-        return "bg-gradient-to-r from-pink-500 to-rose-500";
-      case "Typescript":
-        return "bg-gradient-to-r from-blue-600 to-indigo-600";
-      case "Next.js":
-        return "bg-gradient-to-r from-gray-800 to-gray-900";
-      case "React":
-        return "bg-gradient-to-r from-cyan-400 to-blue-500";
-      case "Bootstrap":
-        return "bg-gradient-to-r from-purple-600 to-indigo-600";
-      case "API":
-        return "bg-gradient-to-r from-green-500 to-emerald-500";
-      case "Next UI":
-        return "bg-gradient-to-r from-purple-500 to-pink-500";
-      case "Tailwind CSS":
-        return "bg-gradient-to-r from-teal-400 to-cyan-500";
-      default:
-        return "bg-gradient-to-r from-gray-500 to-gray-600";
-    }
-  };
-
   return (
     <motion.li
       className="card-container p-0 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl lg:w-full flex flex-col lg:flex-row gap-6 xl:flex-wrap  justify-around items-center m-auto lg:max-h-[480px] lg:h-[470px] overflow-hidden hover:bg-white/10 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl"
@@ -176,6 +147,7 @@ export default function ProjectCard({
         <div className="flex gap-2 flex-wrap w-full">
           {stacks.map((stack: string, index: number) => (
             <Chip
+              key={index}
               classNames={{ base: "text-white dark:text-white", content: "" }}
               color="secondary"
               variant="faded"
