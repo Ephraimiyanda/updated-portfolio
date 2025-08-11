@@ -50,13 +50,13 @@ export default function Contact() {
 
   function messageStatus() {
     if (status === "normal") {
-      return "send Message";
+      return "Send Message";
     } else if (status === "failed") {
-      return "retry";
+      return "Retry";
     } else if (status === "sent") {
-      return "message sent";
+      return "Message Sent";
     } else if (status === "sending") {
-      return "sending message";
+      return "Sending Message";
     }
   }
 
@@ -68,9 +68,6 @@ export default function Contact() {
       <div className="container_form max-w-[1280px] px-3 md:px-6 mx-auto flex flex-col items-start justify-center gap-3 h-full">
         <div className="flex items-start max-w-[1000px] w-full justify-between md:flex-row flex-col md:bg-transparent bg-[#a800fe]  bg-opacity-20 md:rounded-none  rounded-xl  mx-auto">
           <div className="flex flex-col justify-start max-w-[500px] gap-3 items-start px-3">
-            {/* <h2 className="text-3xl w-full text-center mx-auto font-semibold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-600 flex  pt-10">
-              Contact Me
-            </h2> */}
             <h2 className="text-3xl  font-semibold text-transparent bg-clip-text bg-gradient-to-br from-purple-400 to-blue-600 pb-4">
               <p className="text-4xl font-semibold text-white  pt-6 pb-2">
                 <span className="">Contact </span>

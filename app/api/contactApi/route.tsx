@@ -13,8 +13,8 @@ export async function POST(
     port:587,
     secure: true, // Set to true if your SMTP provider requires a secure connection
     auth: {
-      user: "iyandaephraim@gmail.com", // Your email address
-      pass: "erkh lacb rzpl mqfk", // Your email password
+      user: "ziksburner@gmail.com", // Your email address
+      pass: "apeo kabs hjbb cogr", // Your email password
     },
   });
 
