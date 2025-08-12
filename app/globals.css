@@ -77,7 +77,7 @@ html.light.bg-orange {
 }
 
 .nav_dropdown {
-  background-color: transparent;
+  background-color: rgb(0 0 0 / 0.8);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;

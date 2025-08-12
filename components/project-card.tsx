@@ -79,7 +79,7 @@ export default function ProjectCard({
 
   return (
     <motion.li
-      className="card-container p-0 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl lg:w-full flex flex-col lg:flex-row gap-6 xl:flex-wrap  justify-around items-center m-auto lg:max-h-[480px] lg:h-[470px] overflow-hidden hover:bg-white/10 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl"
+      className="card-container  bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl lg:w-full flex flex-col lg:flex-row gap-6 xl:flex-wrap  justify-around items-center m-auto lg:max-h-[480px] lg:h-[470px] overflow-hidden hover:bg-white/10 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl p-4"
       variants={{
         hidden: { y: 80, opacity: 0, scale: 0.9 },
         visible: {
@@ -106,15 +106,15 @@ export default function ProjectCard({
         <Image
           isZoomed
           shadow="sm"
-          radius="lg"
           width="100%"
           height={"100%"}
+          radius="lg"
           alt={title}
           className="w-full object-cover h-full max-h-none min-h-[250px] sm:h-[350px] max-w-[650px] overflow-hidden hover:scale-110 transition-transform duration-700 mx-auto"
           src={img}
         ></Image>
       </div>
-      <div className="text-small lg:w-[45%] w-full text-white text-left items-start flex flex-col gap-4 justify-between p-6">
+      <div className="text-small lg:w-[45%] w-full text-white text-left items-start flex flex-col gap-4 justify-between sm:p-6">
         <div className="sm:w-[500px] mb-auto">
           <h3 className="text-3xl font-bold bg-gradient-to-r from-[#a800fe] to-purple-400 bg-clip-text text-transparent mb-3">
             {title}
