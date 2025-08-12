@@ -42,20 +42,20 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({
     useState<BackgroundColor>("default");
   const [resolvedTheme, setResolvedTheme] = useState<"light" | "dark">("dark");
 
-  useEffect(() => {
-    // Load saved preferences from localStorage
-    const savedTheme = localStorage.getItem("theme") as Theme;
-    const savedBackgroundColor = localStorage.getItem(
-      "backgroundColorScheme"
-    ) as BackgroundColor;
+  // useEffect(() => {
+  //   // Load saved preferences from localStorage
+  //   const savedTheme = localStorage.getItem("theme") as Theme;
+  //   const savedBackgroundColor = localStorage.getItem(
+  //     "backgroundColorScheme"
+  //   ) as BackgroundColor;
 
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
-    if (savedBackgroundColor) {
-      setBackgroundColorScheme(savedBackgroundColor);
-    }
-  }, []);
+  //   if (savedTheme) {
+  //     setTheme(savedTheme);
+  //   }
+  //   if (savedBackgroundColor) {
+  //     setBackgroundColorScheme(savedBackgroundColor);
+  //   }
+  // }, []);
 
   useEffect(() => {
     const updateResolvedTheme = () => {

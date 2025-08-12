@@ -392,7 +392,6 @@ export default function About() {
                     <Chip
                       classNames={{
                         base: "text-white dark:text-white",
-                        content: "",
                       }}
                       color="secondary"
                       variant="faded"

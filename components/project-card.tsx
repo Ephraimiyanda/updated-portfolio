@@ -119,7 +119,9 @@ export default function ProjectCard({
           <h3 className="text-3xl font-bold bg-gradient-to-r from-[#a800fe] to-purple-400 bg-clip-text text-transparent mb-3">
             {title}
           </h3>
-          <p className="text-lg leading-relaxed text-gray-300">{description}</p>
+          <p className="text-lg leading-relaxed dark:text-gray-300 ">
+            {description}
+          </p>
         </div>
         <div className="flex gap-3 font-bold">
           <Button
@@ -148,7 +150,7 @@ export default function ProjectCard({
           {stacks.map((stack: string, index: number) => (
             <Chip
               key={index}
-              classNames={{ base: "text-white dark:text-white", content: "" }}
+              classNames={{ base: "text-white dark:text-white" }}
               color="secondary"
               variant="faded"
               startContent={ImageComponent(stack)}
