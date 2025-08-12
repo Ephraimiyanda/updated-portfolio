@@ -25,7 +25,7 @@ export default function Nav() {
       maxWidth="xl"
       className="md:absolute top-[0] w-full bg-none"
       classNames={{
-        base: "backdrop-blur-sm bg-black/5",
+        base: "bg-transparent",
         toggleIcon: "before:h-1 before:w-9 after:h-1 after:w-9",
       }}
     >
